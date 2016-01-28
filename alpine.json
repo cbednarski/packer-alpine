@@ -50,8 +50,8 @@
         "{{user `ssh_password`}}<enter>",
         "{{user `ssh_password`}}<enter>",
         "echo 'Defaults env_reset<enter>",
-        "%sudo ALL=NOPASSWD: ALL<enter>",
-        "%vagrant ALL(ALL) ALL<enter>",
+        "vagrant ALL=(ALL) ALL<enter>",
+        "vagrant ALL=NOPASSWD: ALL<enter>",
         "' > /etc/sudoers.d/vagrant<enter>"
       ],
       "tools_upload_flavor":"linux",
