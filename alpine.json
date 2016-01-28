@@ -2,9 +2,9 @@
   "variables": {
     "name": "cbednarski/alpine",
     "cpu_cores": "1",
-    "memory": "512",
+    "memory": "384",
     "disk_size": "40960",
-    "headless": "false",
+    "headless": "true",
     "iso_url":"http://wiki.alpinelinux.org/cgi-bin/dl.cgi/v3.3/releases/x86_64/alpine-3.3.1-x86_64.iso",
     "iso_checksum":"0c6be63cbeab562e805b0e337edbc363e8f1291f67e6f9cb0f2daf6695587157",
     "iso_checksum_type":"sha256",
