@@ -41,15 +41,18 @@
         "{{user `root_password`}}<enter>",
         "<wait5><wait5>y<enter>",
         "<wait5><wait5><wait5><wait5><wait5><wait5>",
+        "reboot<enter>",
+        "<wait5><wait5><wait5><wait5>",
+        "root<enter>",
+        "{{user `root_password`}}<enter>",
         "apk add sudo<enter><wait5>",
-        "adduser {{user `ssh_username`}}<enter>",
+        "adduser {{user `ssh_username`}}<enter><wait>",
         "{{user `ssh_password`}}<enter>",
         "{{user `ssh_password`}}<enter>",
         "echo 'Defaults env_reset<enter>",
         "%sudo ALL=NOPASSWD: ALL<enter>",
         "%vagrant ALL(ALL) ALL<enter>",
-        "' > /etc/sudoers.d/vagrant<enter>",
-        "reboot<enter>"
+        "' > /etc/sudoers.d/vagrant<enter>"
       ],
       "tools_upload_flavor":"linux",
       "iso_checksum": "{{user `iso_checksum`}}",
@@ -66,7 +69,14 @@
         "cpuid.coresPerSocket": "1",
         "memsize": "{{user `memory`}}",
         "numvcpus": "{{user `cpu_cores`}}"
-      }
+      },
+      "shutdown_command": "sudo poweroff"
+    }
+  ],
+  "provisioners":[
+    {
+      "type":"shell",
+      "inline":"echo hello"
     }
   ]
 }
