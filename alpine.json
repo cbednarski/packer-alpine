@@ -76,7 +76,7 @@
   "provisioners":[
     {
       "type":"shell",
-      "inline":"echo hello"
+      "inline":"sudo echo hello"
     }
   ]
 }
